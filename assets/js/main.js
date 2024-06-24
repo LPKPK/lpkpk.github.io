@@ -34,6 +34,21 @@ jQuery(document).ready(function($){
 		closePanel(event);
 	});
 
+	// Waypoints
+	$('.work').waypoint(function() {
+		$('.work').addClass('animated fadeIn');
+	}, {
+		offset: '75%'
+	});
+	$('.download').waypoint(function() {
+		$('.download .btn').addClass('animated tada');
+	}, {
+		offset: '75%'
+	});
+
+	// Fancybox
+	$('.work-box').fancybox();
+
 	//show faq content clicking on faqTrigger
 	faqTrigger.on('click', function(event){
 		event.preventDefault();
